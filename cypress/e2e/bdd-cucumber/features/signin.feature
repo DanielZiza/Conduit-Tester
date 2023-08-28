@@ -24,8 +24,7 @@ Given the user navigates to the Main page
 And click in Sign in Button
 When do not write anything in e-mail  
 And write a valid password 
-And submit in Sign in
-Then the application should me the error: email can't be blank
+Then the sign up button must be disabled
 
 #STEP ID: CT010
 Scenario:Login without "password"

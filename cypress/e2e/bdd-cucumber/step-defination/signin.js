@@ -38,11 +38,11 @@ Then("the application should me the error: email or password is invalid", () => 
 
 //CT009
 Given('do not write anything in e-mail', () => {
-	cy.get(signin_env.UsernameField).click().type();
+	cy.get(signin_env.UsernameField).click().clear();
 });
 
- Then("the application should me the error: email can't be blank", () => {
-   cy.get(signin_env.InvalidEmail).contains("email can't be blank");
+ Then("the sign up button must be disabled", () => {
+   cy.get(signin_env.SubmitButton).should('be.disabled')
 
 });
 

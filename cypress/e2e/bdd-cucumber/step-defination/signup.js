@@ -11,12 +11,12 @@ Given('click in Sign Up', () => {
 });
 
 Given('write the username with characteres special', () => {
-	cy.get(signup_env.UsernameField).click().type('MaicOnaeeaaaaaaaaaaaaaaaaaaaaaaaa_P$R@f!!');
+	cy.get(signup_env.UsernameField).click().type('ZiZ!@#$%');
 
 });
 
 Given('write the valid email', () => {
-    cy.get(signup_env.EmailField).click().type('tester000001121211110201090222o0000000001@gmail.com');
+    cy.get(signup_env.EmailField).click().type('makesurelogin@gmail.com');
 	
 });
 
