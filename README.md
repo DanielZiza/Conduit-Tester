@@ -12,7 +12,7 @@ Make sure you have Node.js and npm (or yarn) installed on your system before pro
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-user/test-cypress-cucumber-repository.git
+   git clone https://github.com/DanielZiza/Conduit-Tester.git
    cd test-cypress-cucumber-repository
    ```
 
@@ -31,9 +31,11 @@ Make sure you have Node.js and npm (or yarn) installed on your system before pro
 The project follows an organized structure to facilitate the creation, maintenance, and execution of automated tests:
 
 - `cypress/`
-  - `integration/`: Contains the test files written in Gherkin.
-  - `plugins/`: Enables extending Cypress functionalities.
-  - `support/`: Includes support files like custom commands.
+   - e2e
+      - bdd-cucumber    
+           - `features/`: Contains the test files written in Gherkin.
+           - `step-defination/`: Enables extending Cypress functionalities.
+           
 
 ## Writing Tests
 
@@ -56,9 +58,3 @@ Feature: Login
 ## Cucumber (Gherkin) Support Enhanced for Behat Extension
 
 The Behat extension provides syntax highlighting and additional features for `.feature` files, enhancing readability and the writing experience. Additionally, it assists in generating automated test steps based on the steps defined in the scenarios.
-
-## Contribution
-
-Contributions are welcome! Feel free to open issues or pull requests to propose improvements, bug fixes, or new features.
-
-## Additional Resources
