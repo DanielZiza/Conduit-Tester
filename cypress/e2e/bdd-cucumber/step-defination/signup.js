@@ -1,28 +1,13 @@
 import {Given, When, Then} from "@badeball/cypress-cucumber-preprocessor";
 import { signup_env } from "../../../../signup.env";
 
-//CT001
-Given('the user navigates to Main page', () => {
-	cy.visit('https://angular.realworld.io');
-    })
 
-Given('click in Sign Up', () => {
-	cy.get(signup_env.SignUpButton).click();
-});
 
 Given('write the username with characteres special', () => {
-	cy.get(signup_env.UsernameField).click().type('ZiZ!@#$%');
+	cy.get(signup_env.UsernameField).click().type('@!*t3st!@gmail.com');
 
 });
 
-Given('write the valid email', () => {
-    cy.get(signup_env.EmailField).click().type('makesurelogin@gmail.com');
-	
-});
-
-Given('write the valid password', () => {
-	cy.get(signup_env.PasswordField).click().type('abc12345');
-});
 
 When('click submit signup button', () => {
 	cy.get(signup_env.SubmitButton).click();

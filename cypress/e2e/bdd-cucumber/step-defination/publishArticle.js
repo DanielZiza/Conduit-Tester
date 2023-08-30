@@ -1,20 +1,10 @@
-import {Given, When, Then} from "@badeball/cypress-cucumber-preprocessor";
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import { publishArticle_env } from "../../../../publishArticle.env";
 
 //limpar a base de dados na aplicação antes de executar
 
-//CT012
 Given('click in a Sign in Button', () => {
 	cy.get(publishArticle_env.MainteanceSignButton).click();
-});
-
-When('write an existing account e-mail', () => {
-	cy.get(publishArticle_env.ArticleUsernameField).click().type('ferox104@gmail.com');
-
-});
-
-When('write an valid password', () => {
-	cy.get(publishArticle_env.ArticlePasswordField).click().type('abc12345');
 });
 
 When('send submit in Sign in', () => {
@@ -26,9 +16,9 @@ When("click in New Article in topside right", () => {
 	cy.get(publishArticle_env.NewArticleButton).click();
 });
 
-When("write: THIS IS FANTASTIC LOLLLL", () => {
-	
-	cy.get(publishArticle_env.ArticleTitle).click().type('THIS IS FANTASTIC LOLLLL')
+When("write: THIS IS FANTASTIC LOL", () => {
+
+	cy.get(publishArticle_env.ArticleTitle).click().type('THIS IS FANTASTIC LOL')
 });
 
 When("write in article about: Word Changes", () => {
@@ -45,10 +35,6 @@ When("write enter tags: Space Word", () => {
 
 When("write: THIS IS FANTASTIC LOLL", () => {
 	cy.get(publishArticle_env.ArticleTitle).click().type('THIS IS FANTASTIC LOLL')
-});
-
-When("click in submit article", () => {
-	cy.get(publishArticle_env.PublishArticleButton).click();
 });
 
 

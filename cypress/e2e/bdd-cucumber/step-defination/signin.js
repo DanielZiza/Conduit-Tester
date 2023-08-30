@@ -1,23 +1,6 @@
 import {Given, When, Then} from "@badeball/cypress-cucumber-preprocessor";
 import { signin_env } from "../../../../signin.env";
 
-//CT007
-Given("the user navigates to the Main page", () => {
-	cy.visit('https://angular.realworld.io');
-    });
-
-Given('click in Sign in Button', () => {
-	cy.get(signin_env.SignInButton).click();
-});
-
-Given('write a existing account e-mail', () => {
-	cy.get(signin_env.UsernameField).click().type('ferox104@gmail.com');
-
-});
-
-Given('write a valid password', () => {
-	cy.get(signin_env.PasswordField).click().type('abc12345');
-});
 
 When('submit in Sign in', () => {
 	cy.get(signin_env.SubmitButton).click();
@@ -28,7 +11,7 @@ Then("the application should take me to the main page of the account", () => {
 });
 
 //CT008
-Given('write a invalid password', () => {
+Given('write an invalid password', () => {
 	cy.get(signin_env.PasswordField).click().type('invalid01');
 });
 
